@@ -12,8 +12,8 @@ const SearchBox = (props) =>  {
          <div  className="container searchContainer">
             <div className="search card card-body">
               <h1>Search  Users profiles</h1>
-              <p className="lead">Enter a username to fetch a user profile </p>
-            <input type="text" id="searchUser" className="form-control" placeholder="User Username..." onChange={searchange}/>
+              <p className="lead">Enter users firstname to fetch a user profile </p>
+            <input type="text" id="searchUser" className="form-control" placeholder="User Firstname..." onChange={searchange}/>
            </div>
         <br />
          </div>

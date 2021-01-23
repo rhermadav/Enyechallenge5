@@ -2,9 +2,9 @@ import React from 'react';
 
 const ProfileList = (props) =>  {
   // console.log(props.profiles);
-  const { profiles } = props;
+  const { profiles ,loading } = props;
   console.log(profiles);
- if (profiles === null){
+ if (loading){
   return <div>hi</div>;
   }
  else return(
@@ -14,10 +14,11 @@ const ProfileList = (props) =>  {
           <div className="row">
             <div className="col-md-3">
               <button  target="_blank" className="btn btn-primary btn-block mb-4">View Profile</button>
+              <span className="badge badge-primary  mb-4 mypad ">Gender: {profile.Gender}</span>
+              <span className="badge badge-secondary mypad">CreditCardType: {profile.CreditCardType}</span>
             </div>
             <div className="col-md-9">
-              <span className="badge badge-primary">Gender: {profile.Gender}</span>
-              <span className="badge badge-secondary">CreditCardType: {profile.CreditCardType}</span>
+              
               <span className="badge badge-success">DomainName: {profile.DomainName}</span>
               <span className="badge badge-info">Email: {profile.Email}</span>
               <br />
